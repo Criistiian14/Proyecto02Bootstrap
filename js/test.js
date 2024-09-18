@@ -102,11 +102,13 @@ let alumno = new Object({
     edad:25,
     inscribir: () => { 
         console.log("Se ha inscripto correctamente")
-    }
+                    },
+    saludar: () => { console.log("Bienvenida Maria Gonzalez")}
 })
 
 //llamo al metodo inscribir del alumno
 alumno.inscribir()
+alumno.saludar()
 
 //keys, claves
 //values, valores
@@ -116,3 +118,66 @@ console.log("Values de alumnos " + Object.values(alumno))
 
 // entries: par keys/value
 console.log("Entries: " + Object.entries(alumno))
+
+console.log("Keys de indumentaria " + Object.keys(indumentaria));
+console.log("Values de indumentaria " + Object.values(indumentaria));
+console.log("Pares atributo valor (entrada) de indumentaria " + Object.entries(indumentaria));
+
+
+// creamos arrays
+
+let provincias=["Santa Fe","San Luis","Chaco","Corrientes","Buenos Aires"]
+
+let asistente=[
+        {nombre: "Julia", dni: 21438732,},
+        {nombre: "Maria", dni: 45256786,},
+        {nombre: "Pedro", dni: 08543278,},
+        {nombre: "Luis", dni: 34567543,},
+        {nombre: "Ana", dni: 23456789,}
+]
+
+// mostrar array
+
+console.log("La cantidad de Provincias ingresadas son: " + provincias.length)
+console.log("la cantidad de Asistentes ingresadas son: " + asistente.length)
+
+console.log(provincias[2]);
+
+// SHIFT eliminar el primer dato
+console.log(provincias[0]);
+provincias.shift()
+console.log(provincias[0]);
+
+// POP eliminar el ultimo dato
+console.log(provincias[provincias.length - 1]);
+provincias.pop()
+console.log(provincias[provincias.length - 1]);
+
+// PUSH agregar al ULTIMO
+provincias.unshift("Santa Fe")
+console.log(provincias[provincias.length - 1]);
+
+// UNSHIFT agrega como primer elemento
+console.log(" primer elemento" + provincias[0])
+provincias.unshift("Catamarca")
+console.log("Agrege Primer elemento" + provincias[0])
+
+console.log(Object.values(provincias))
+
+console.log(Object.keys(provincias))
+
+asistente.unshift({nombre:"Teresa", dni:67281935})
+asistente.push({nombre:"Mario", dni:65973215})
+
+console.log(Object.values(asistente));
+
+console.log("Buscando elementos en array con includes")
+console.log("Hay alguien llamada Ana como asistente") + asistente.includes({nombre: "Ana", dni: 23456789})
+
+console.log("esta Catamarca " + provincias.includes("Catamarca"))
+
+console.log("Buscando elementos en array con indexOF")
+console.log("El indice de Ana es: " + 
+    asistente.indexOf({nombre: "Ana", dni: 23456789,}))
+
+console.log("el index o posicion de Chaco es: " + provincias.indexOf("Chaco"))
