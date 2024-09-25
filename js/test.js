@@ -129,11 +129,11 @@ console.log("Pares atributo valor (entrada) de indumentaria " + Object.entries(i
 let provincias=["Santa Fe","San Luis","Chaco","Corrientes","Buenos Aires"]
 
 let asistente=[
-        {nombre: "Julia", dni: 21438732,},
-        {nombre: "Maria", dni: 45256786,},
-        {nombre: "Pedro", dni: 08543278,},
-        {nombre: "Luis", dni: 34567543,},
-        {nombre: "Ana", dni: 23456789,}
+        {nombre: "Julia", dni: 21438732},
+        {nombre: "Maria", dni: 45256786},
+        {nombre: "Pedro", dni: 58503278},
+        {nombre: "Luis", dni: 34567543},
+        {nombre: "Ana", dni: 23456789}
 ]
 
 // mostrar array
@@ -181,3 +181,80 @@ console.log("El indice de Ana es: " +
     asistente.indexOf({nombre: "Ana", dni: 23456789,}))
 
 console.log("el index o posicion de Chaco es: " + provincias.indexOf("Chaco"))
+
+
+//Comienza con FUNCTION nombreFuncion (parametros){instrucciones}
+function sumar (nro1, nro2){
+    return nro1 + nro2;
+}
+
+//Llama a la funcion y se ejecuta con su nombre
+console.log("sumar funcion " + sumar(5,10));
+
+
+//Funciones anonimas (No tienen nombre) y el resultado
+//de la ejecucion se guarda en la variable
+const resultado = function (nro1, nro2) { return nro1+nro2; };
+console.log("resultado " + resultado);
+
+
+
+function esMayorEdadMenor90(edad){
+    if(edad>18 && edad<90)
+        {return true;}
+    else{
+        return false;}   
+}
+console.log(" es mayor de edad " + esMayorEdadMenor90(20))
+console.log(" es mayor de edad " + esMayorEdadMenor90(91))
+
+function queDiaCobroBeca(ultdni){
+    switch(ultdni){
+        case 1: console.log("cobra lunes")
+        break;
+        case 2: console.log("cobra martes")
+        break;
+        case 3: console.log("cobra miercoles")
+        break;
+        case 4: console.log("cobra jueves")
+        break;
+        case 5: console.log("cobra viernes")
+        break;
+        default: console.log("fecha no especificada")
+    }
+}
+
+queDiaCobroBeca(2);
+queDiaCobroBeca(8);
+
+//
+let asistencia = ["Ramiro", "Agustin", "Elian", "Guido", "Denise", "cristian"];
+
+function mostrarAsistenciaDeHoy(asistencia){
+    for (let i=0; asistencia.length-1; i++)
+    {
+        console.log("Hoy asistieron " + asistencia[i]);
+    }
+}
+
+function cuantosAsistieron(asistencia){
+    console.log(asistencia.length);
+}
+
+let edades =[18,19,20,22,24,23,23];
+
+function promedioEdades(edades){
+    let i=0;
+    while(i<edades.length){
+        i++;
+        console.log( edades[i]);
+        sumaEdades = sumaEdades+edades[i];
+    }
+    console.log("Promedio de edades: " + sumaEdades/sumaEdades.length);
+}
+
+mostrarAsistenciaDeHoy(asistencia);
+cuantosAsistieron(asistencia);
+promedioEdades(edades);
+
+let elementoh2 = document get
